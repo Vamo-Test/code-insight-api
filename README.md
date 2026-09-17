@@ -1,2 +1,26 @@
 # code-insight-api
+
 Get instant AI-powered insights into your codebase and job matches.
+
+A zero-dependency Cloudflare Worker JSON API.
+
+## Routes
+
+- `GET /` · `GET /health` — liveness `{ ok, service, now }`
+- `GET /insights` — the seeded collection
+- `POST /echo` — echoes method + body
+
+## Develop
+
+```sh
+npm install
+npm run dev      # http://localhost:8787
+```
+
+## Deploy
+
+```sh
+npm run deploy   # -> https://code-insight-api.<subdomain>.workers.dev
+```
+
+_Built by an autonomous dev agent. See `AGENT.md` for persona, mission, and changelog._

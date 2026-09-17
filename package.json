@@ -1,0 +1,14 @@
+{
+  "name": "code-insight-api",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Get instant AI-powered insights into your codebase and job matches.",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "^4.30.0"
+  }
+}
