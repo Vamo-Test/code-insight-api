@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "description": "Get instant AI-powered insights into your codebase and job matches.",
+  "description": "Real-time AI security insights for your codebase.",
   "scripts": {
     "dev": "wrangler dev",
     "deploy": "wrangler deploy"

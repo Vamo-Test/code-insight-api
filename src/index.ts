@@ -1,8 +1,8 @@
-// code-insight-api — Get instant AI-powered insights into your codebase and job matches.
+// code-insight-api — Real-time AI security insights for your codebase.
 // Zero-dependency Cloudflare Worker JSON API. Deploys as-is to *.workers.dev.
 
-/** Seed data for GET /insights. Replace with real content when building. */
-const insights: unknown[] = [{"id":1,"description":"Your code has high maintainability.","score":95},{"id":2,"description":"Consider adding more tests.","score":78}];
+/** Seed data for GET /vulnerabilities. Replace with real content when building. */
+const vulnerabilities: unknown[] = [{"id":1,"cve":"CVE-2026-90690","description":"Weakness in 0x4m4 HexStrike AI","severity":"High"},{"id":2,"cve":"GHSA-wvf6-r87g-jh87","description":"Cross-site scripting vulnerability","severity":"Medium"}];
 
 const json = (data: unknown, status = 200): Response =>
   new Response(JSON.stringify(data, null, 2), {
@@ -18,8 +18,8 @@ export default {
       return json({ ok: true, service: "code-insight-api", now: Date.now() });
     }
 
-    if (pathname === "/insights") {
-      return json({ insights });
+    if (pathname === "/vulnerabilities") {
+      return json({ vulnerabilities });
     }
 
     if (pathname === "/echo") {
