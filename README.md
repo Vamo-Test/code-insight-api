@@ -1,13 +1,13 @@
 # code-insight-api
 
-Real-time AI security insights for your codebase.
+Get instant, precise technical insights into your codebase or job listings.
 
 A zero-dependency Cloudflare Worker JSON API.
 
 ## Routes
 
 - `GET /` · `GET /health` — liveness `{ ok, service, now }`
-- `GET /vulnerabilities` — the seeded collection
+- `GET /insights` — the seeded collection
 - `POST /echo` — echoes method + body
 
 ## Develop
